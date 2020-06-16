@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+Welcome
+<br>
+<!--<a href="/login">Daxil ol</a>-->
+
+<p th:text="*{greeting}"/>
+<br>
+<a href="/signup">Hesab yarat</a>
+
+<br>
+
+<a href="/showForm">Form yarat</a>
+<h1 th:utext="#{welcome}"/>
+
+</body>
+</html>
