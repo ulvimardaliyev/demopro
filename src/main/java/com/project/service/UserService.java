@@ -10,8 +10,12 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    @Autowired
     private UserRep userRep;
+
+
+    public UserService(UserRep userRep) {
+        this.userRep = userRep;
+    }
 
     public UserService() {
     }
@@ -33,8 +37,8 @@ public class UserService {
         return null;
     }
 
-    public User updateUser(User user) {
-        Optional<User> userOptional = userRep.findById(user.getId());
+           public User updateUser(User user) {
+            Optional<User> userOptional = userRep.findById(user.getId());
 
         if (!userOptional.isPresent()) {
             return userRep.save(userOptional.get());
